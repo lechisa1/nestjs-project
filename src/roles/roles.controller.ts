@@ -23,6 +23,14 @@ export class RolesController {
     return this.roleService.create(createRoleDto);
   }
   @UseGuards(AuthGuard("jwt"))
+  @Post(":id/permissions")
+  assignPermissions(
+    @Param("id") roleId: number,
+    @Body("permissions") permissionIds: number[],
+  ) {
+    return this.roleService.assignPermissions(roleId, permissionIds);
+  }
+  //   @UseGuards(AuthGuard("jwt"))
   @Get()
   findAll(@Query("role") role?: string) {
     return this.roleService.findAll(role);

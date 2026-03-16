@@ -42,6 +42,7 @@ const common_1 = require("@nestjs/common");
 const express_session_1 = __importDefault(require("express-session"));
 const nest_winston_1 = require("nest-winston");
 const winston = __importStar(require("winston"));
+const swagger_1 = require("@nestjs/swagger");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule, {
         logger: nest_winston_1.WinstonModule.createLogger({
@@ -65,6 +66,14 @@ async function bootstrap() {
     app.useStaticAssets("uploads", {
         prefix: "/uploads/",
     });
+    const config = new swagger_1.DocumentBuilder()
+        .setTitle("User Management example")
+        .setDescription("The User API description")
+        .setVersion("1.0")
+        .addTag("cats")
+        .build();
+    const documentFactory = () => swagger_1.SwaggerModule.createDocument(app, config);
+    swagger_1.SwaggerModule.setup("api", app, documentFactory);
     app.setGlobalPrefix("api");
     app.enableCors();
     const port = process.env.PORT || 3000;

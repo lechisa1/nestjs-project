@@ -3,42 +3,97 @@ import { PrismaService } from "src/prisma/prisma.service";
 import { CreateRoleDto } from "./dto/create-role.dto";
 import { UpdateRoleDto } from "./dto/update-role.dto";
 import { error } from "console";
+import { permission } from "process";
 @Injectable()
 export class RolesService {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(createRoleDto: CreateRoleDto) {
+    const { permissions, ...roleData } = createRoleDto;
+
     const role = await this.prisma.role.create({
-      data: createRoleDto,
-      select: {
-        name: true,
-        description: true,
+      data: {
+        ...roleData,
+        permissions: permissions
+          ? {
+              create: permissions.map((permissionId) => ({
+                permission: { connect: { id: permissionId } },
+              })),
+            }
+          : undefined,
+      },
+      include: {
+        permissions: {
+          include: {
+            permission: true,
+          },
+        },
       },
     });
-    if (!role) {
-      console.log("Something wrong while create role");
-      return;
-    }
+
     return {
       success: true,
-      message: "Role created Successfully",
+      message: "Role created successfully",
       data: role,
     };
   }
+  async assignPermissions(roleId: number, permissionIds: number[]) {
+    await this.prisma.rolePermission.createMany({
+      data: permissionIds.map((id) => ({
+        roleId,
+        permissionId: id,
+      })),
+    });
 
+    return {
+      success: true,
+      message: "Permissions assigned successfully",
+    };
+  }
+  // async findAll(role?: string) {
+  //   const roles = await this.prisma.role.findMany({
+  //     where: role ? { name: { contains: role } } : {},
+  //     orderBy: { createdAt: "desc" },
+  //     select: {
+  //       name: true,
+  //       description: true,
+
+  //     },
+  //   });
+  //   return {
+  //     success: true,
+  //     message: "Roles fetched successfully",
+  //     data: roles,
+  //   };
+  // }
   async findAll(role?: string) {
     const roles = await this.prisma.role.findMany({
       where: role ? { name: { contains: role } } : {},
       orderBy: { createdAt: "desc" },
-      select: {
-        name: true,
-        description: true,
+      include: {
+        permissions: {
+          include: {
+            permission: true, // this fetches actual permission details
+          },
+        },
       },
     });
+
+    // Optionally, map to make it cleaner
+    const formattedRoles = roles.map((r) => ({
+      name: r.name,
+      description: r.description,
+      permissions: r.permissions.map((p) => ({
+        id: p.permission.id,
+        name: p.permission.name,
+        description: p.permission.description,
+      })),
+    }));
+
     return {
       success: true,
       message: "Roles fetched successfully",
-      data: roles,
+      data: formattedRoles,
     };
   }
   async findOne(id: number) {

@@ -522,3 +522,232 @@
 {"context":"HTTP","level":"info","message":"GET /api/roles 200 - 6ms | Body: {\"email\":\"abdi@gmail.com\",\"password\":\"password\"} | Params: {\"0\":\"roles\"} | Query: {}"}
 {"context":"HTTP","level":"info","message":"GET /api/roles/1 200 - 1ms | Body: {\"email\":\"abdi@gmail.com\",\"password\":\"password\"} | Params: {\"0\":\"roles/1\"} | Query: {}"}
 {"context":"HTTP","level":"info","message":"POST /api/roles 201 - 6ms | Body: {\"name\":\"role after checked\",\"description\":\"this is descriptions\"} | Params: {\"0\":\"roles\"} | Query: {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"EmployeeModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"DepartmentsModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"UploadModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"RolesModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"EmployeeController {/api/employees}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/active, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/department/:department, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"DepartmentsController {/api/departments}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, PUT} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"RolesController {/api/roles}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"UploadController {/api/upload}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/upload, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"HTTP","level":"info","message":"GET /api/employees 200 - 12ms | Body: {} | Params: {\"0\":\"employees\"} | Query: {}"}
+{"context":"HTTP","level":"info","message":"GET /api/departments 200 - 3ms | Body: {} | Params: {\"0\":\"departments\"} | Query: {}"}
+{"context":"HTTP","level":"info","message":"GET /api/users 401 - 3ms | Body: {} | Params: {\"0\":\"users\"} | Query: {}"}
+{"context":"HTTP","level":"info","message":"GET /api/users/2 200 - 8ms | Body: {} | Params: {\"0\":\"users/2\"} | Query: {}"}
+{"context":"HTTP","level":"info","message":"POST /api/auth/login 201 - 161ms | Body: {\"email\":\"abdi@gmail.com\",\"password\":\"password\"} | Params: {\"0\":\"auth/login\"} | Query: {}"}
+{"context":"HTTP","level":"info","message":"POST /api/auth/login 201 - 155ms | Body: {\"email\":\"abdi@gmail.com\",\"password\":\"password\"} | Params: {\"0\":\"auth/login\"} | Query: {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"EmployeeModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"DepartmentsModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"UploadModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"RolesModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"EmployeeController {/api/employees}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/active, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/department/:department, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"DepartmentsController {/api/departments}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, PUT} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"RolesController {/api/roles}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id/permissions, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"UploadController {/api/upload}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/upload, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"HTTP","level":"info","message":"GET /api/roles 200 - 5ms | Body: {\"name\":\"role after checked\",\"description\":\"this is descriptions\"} | Params: {\"0\":\"roles\"} | Query: {}"}
+{"context":"HTTP","level":"info","message":"GET /api/roles 200 - 1ms | Body: {\"name\":\"role after checked\",\"description\":\"this is descriptions\"} | Params: {\"0\":\"roles\"} | Query: {}"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"EmployeeModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"DepartmentsModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"UploadModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"RolesModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"EmployeeController {/api/employees}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/active, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/department/:department, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"DepartmentsController {/api/departments}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, PUT} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"RolesController {/api/roles}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id/permissions, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"UploadController {/api/upload}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/upload, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"EmployeeModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"DepartmentsModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"UploadModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"RolesModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"EmployeeController {/api/employees}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/active, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/department/:department, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"DepartmentsController {/api/departments}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, PUT} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"RolesController {/api/roles}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id/permissions, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"UploadController {/api/upload}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/upload, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"EmployeeModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"DepartmentsModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"UploadModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"RolesModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"EmployeeController {/api/employees}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/active, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/department/:department, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/employees/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"DepartmentsController {/api/departments}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/departments/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, PUT} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"RolesController {/api/roles}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id/permissions, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/roles/:id, DELETE} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route"}
+{"context":"RoutesResolver","level":"info","message":"UploadController {/api/upload}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/upload, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"HTTP","level":"info","message":"GET /api/roles 200 - 5ms | Body: {\"name\":\"role after checked\",\"description\":\"this is descriptions\"} | Params: {\"0\":\"roles\"} | Query: {}"}
+{"context":"HTTP","level":"info","message":"GET /api/roles?role=admin 200 - 5ms | Body: {} | Params: {\"0\":\"roles\"} | Query: {\"role\":\"admin\"}"}

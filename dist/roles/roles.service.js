@@ -17,36 +17,69 @@ let RolesService = class RolesService {
         this.prisma = prisma;
     }
     async create(createRoleDto) {
+        const { permissions, ...roleData } = createRoleDto;
         const role = await this.prisma.role.create({
-            data: createRoleDto,
-            select: {
-                name: true,
-                description: true,
+            data: {
+                ...roleData,
+                permissions: permissions
+                    ? {
+                        create: permissions.map((permissionId) => ({
+                            permission: { connect: { id: permissionId } },
+                        })),
+                    }
+                    : undefined,
+            },
+            include: {
+                permissions: {
+                    include: {
+                        permission: true,
+                    },
+                },
             },
         });
-        if (!role) {
-            console.log("Something wrong while create role");
-            return;
-        }
         return {
             success: true,
-            message: "Role created Successfully",
+            message: "Role created successfully",
             data: role,
+        };
+    }
+    async assignPermissions(roleId, permissionIds) {
+        await this.prisma.rolePermission.createMany({
+            data: permissionIds.map((id) => ({
+                roleId,
+                permissionId: id,
+            })),
+        });
+        return {
+            success: true,
+            message: "Permissions assigned successfully",
         };
     }
     async findAll(role) {
         const roles = await this.prisma.role.findMany({
             where: role ? { name: { contains: role } } : {},
             orderBy: { createdAt: "desc" },
-            select: {
-                name: true,
-                description: true,
+            include: {
+                permissions: {
+                    include: {
+                        permission: true,
+                    },
+                },
             },
         });
+        const formattedRoles = roles.map((r) => ({
+            name: r.name,
+            description: r.description,
+            permissions: r.permissions.map((p) => ({
+                id: p.permission.id,
+                name: p.permission.name,
+                description: p.permission.description,
+            })),
+        }));
         return {
             success: true,
             message: "Roles fetched successfully",
-            data: roles,
+            data: formattedRoles,
         };
     }
     async findOne(id) {

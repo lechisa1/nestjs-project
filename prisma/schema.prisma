@@ -70,6 +70,8 @@ model Role {
 
 model Permission {
     id          Int     @id @default(autoincrement())
+    module      String
+    action      String
     name        String  @unique
     description String?
 

@@ -6,6 +6,7 @@ import { ValidationPipe } from "@nestjs/common";
 import session from "express-session";
 import { WinstonModule } from "nest-winston";
 import * as winston from "winston";
+import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
@@ -42,7 +43,14 @@ async function bootstrap() {
   app.useStaticAssets("uploads", {
     prefix: "/uploads/",
   });
-
+  const config = new DocumentBuilder()
+    .setTitle("User Management example")
+    .setDescription("The User API description")
+    .setVersion("1.0")
+    .addTag("cats")
+    .build();
+  const documentFactory = () => SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup("api", app, documentFactory);
   // Global prefix & CORS
   app.setGlobalPrefix("api");
   app.enableCors();

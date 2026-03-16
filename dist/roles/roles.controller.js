@@ -25,6 +25,9 @@ let RolesController = class RolesController {
     create(createRoleDto) {
         return this.roleService.create(createRoleDto);
     }
+    assignPermissions(roleId, permissionIds) {
+        return this.roleService.assignPermissions(roleId, permissionIds);
+    }
     findAll(role) {
         return this.roleService.findAll(role);
     }
@@ -49,6 +52,14 @@ __decorate([
 ], RolesController.prototype, "create", null);
 __decorate([
     (0, common_1.UseGuards)((0, passport_1.AuthGuard)("jwt")),
+    (0, common_1.Post)(":id/permissions"),
+    __param(0, (0, common_1.Param)("id")),
+    __param(1, (0, common_1.Body)("permissions")),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number, Array]),
+    __metadata("design:returntype", void 0)
+], RolesController.prototype, "assignPermissions", null);
+__decorate([
     (0, common_1.Get)(),
     __param(0, (0, common_1.Query)("role")),
     __metadata("design:type", Function),
